@@ -17,10 +17,11 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
   entryComponents: [],
   imports: [BrowserModule, 
             IonicModule.forRoot(), 
-            AppRoutingModule, 
-            BrowserAnimationsModule, 
-            MatButtonModule, 
-            MatCheckboxModule],
+            AppRoutingModule,
+            BrowserAnimationsModule,
+            MatButtonModule,
+            MatCheckboxModule
+          ],
   providers: [
     StatusBar,
     SplashScreen,
