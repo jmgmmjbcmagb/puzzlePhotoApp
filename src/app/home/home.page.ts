@@ -8,10 +8,10 @@ import { CdkDragDrop, CdkDropList, transferArrayItem, CdkDrag, moveItemInArray }
 })
 export class HomePage {
   todo = [
-    { value: '1', done: 'done1', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-o0iD9LWclsIs/image_part_001.jpg' },
-    { value: '2', done: 'done2', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-o0iD9LWclsIs/image_part_002.jpg' },
-    { value: '3', done: 'done3', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-o0iD9LWclsIs/image_part_003.jpg' },
-    { value: '4', done: 'done4', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-o0iD9LWclsIs/image_part_004.jpg' }
+    { value: '1', done: 'done1', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-EykWMbkO0cNr4Pie/image_part_001.jpg' },
+    { value: '2', done: 'done2', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-EykWMbkO0cNr4Pie/image_part_002.jpg' },
+    { value: '3', done: 'done3', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-EykWMbkO0cNr4Pie/image_part_003.jpg' },
+    { value: '4', done: 'done4', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-EykWMbkO0cNr4Pie/image_part_004.jpg' }
   ];
 
   done1 = [];
@@ -30,10 +30,10 @@ export class HomePage {
   public reload(): void{
     console.log("console")
     this.todo = [
-      { value: '1', done: 'done1', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-o0iD9LWclsIs/image_part_001.jpg' },
-      { value: '2', done: 'done2', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-o0iD9LWclsIs/image_part_002.jpg' },
-      { value: '3', done: 'done3', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-o0iD9LWclsIs/image_part_003.jpg' },
-      { value: '4', done: 'done4', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-o0iD9LWclsIs/image_part_004.jpg' }
+      { value: '1', done: 'done1', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-EykWMbkO0cNr4Pie/image_part_001.jpg' },
+      { value: '2', done: 'done2', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-EykWMbkO0cNr4Pie/image_part_002.jpg' },
+      { value: '3', done: 'done3', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-EykWMbkO0cNr4Pie/image_part_003.jpg' },
+      { value: '4', done: 'done4', img: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-cut-image-EykWMbkO0cNr4Pie/image_part_004.jpg' }
     ];
   
     this.done1 = [];
