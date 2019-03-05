@@ -60,7 +60,6 @@ export class FourPiecesPage implements OnInit {
         }
       ]
     });
-
     await alert.present();
   }
 
@@ -68,8 +67,6 @@ export class FourPiecesPage implements OnInit {
     this.reload();
     this.img = img;
   }
-
-
 
   slideOpts = {
     effect: 'flip',

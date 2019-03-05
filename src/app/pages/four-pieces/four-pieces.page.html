@@ -35,16 +35,8 @@
       </div>
     </ion-col>
   </ion-row>
-  <ion-row>
-    <ion-col class="slideCol">
-        <ion-slides scrollbar="true" [options]="slideOpts" class="slide">
-            <ion-slide *ngFor="let slide of imgs" (click)="changeImg(slide.img)">
-                <ion-img class="imgSlide" [src]="slide.img"></ion-img>
-            </ion-slide>
-          </ion-slides>
-    </ion-col>
-  </ion-row>
 </div>
+<selectImg style="position: absolute"></selectImg>
 <ion-footer>
   <ion-toolbar>
     <ion-button [routerLink]="['/ninePieces']">NinePieces</ion-button>

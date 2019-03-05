@@ -20,7 +20,7 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
             AppRoutingModule,
             BrowserAnimationsModule,
             MatButtonModule,
-            MatCheckboxModule
+            MatCheckboxModule,
           ],
   providers: [
     StatusBar,

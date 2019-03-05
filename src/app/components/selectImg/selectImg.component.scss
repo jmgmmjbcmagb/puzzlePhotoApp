@@ -1,0 +1,81 @@
+@-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background: rgba(0,0,0,0.5)
+}
+
+.slidesImg {
+    width: 100vw;
+    height: 60vh;
+    background: gray;
+    position: absolute;
+    bottom: 0;
+}
+
+.slide-in-bottom{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both}
+.fade-in{-webkit-animation:fade-in 2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 2s cubic-bezier(.39,.575,.565,1.000) both}
+
+
+buttonUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background: white;
+    position: absolute;
+  }
+  
+  .box {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 30px rgba(black, .2);
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .wave {
+    opacity: 0.4;
+    position: absolute;
+    top: 35vh;
+    background: #0af;
+    width: 100vh;
+    height: 100vh;
+    -webkit-transform-origin: 50% 48%;
+    transform-origin: 36% 56%;
+    border-radius: 50%;
+    -webkit-animation: drift 3000ms infinite linear;
+    animation: drift 3000ms infinite linear;
+  }
+  
+  .wave.-three {
+    animation: drift 5000ms infinite linear;
+  }
+  
+  .wave.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: .1;
+    background: yellow;
+  }
+  
+  .box:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  @keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+  }

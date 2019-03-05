@@ -20,9 +20,9 @@ export class NinePiecesPage implements OnInit {
   done8 = [];
   done9 = [];
 
-  img = []
-
   imgs = []
+
+  img: string = ''
 
 
   ngOnInit() {
