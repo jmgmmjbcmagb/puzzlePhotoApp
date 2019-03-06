@@ -7,7 +7,11 @@
 
   <base href="/" />
 
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
 
@@ -18,9 +22,33 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Rotation mensage -->
+  <style>
+    .rotate {
+      display: none;
+    }
+    @media only screen and (orientation:landscape) {
+      .rotate {
+        display: unset;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: black;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="rotate fade-in">
+    <h1>Por favor, rota la pantalla</h1>
+  </div>
   <app-root></app-root>
 </body>
 

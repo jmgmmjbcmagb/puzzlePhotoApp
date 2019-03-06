@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, CdkDropList, transferArrayItem, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
 import { AlertController } from '@ionic/angular';
-import { GetPhotosService } from '../../services/get-photos.service'
 
 @Component({
   selector: 'app-nine-pieces',
@@ -19,16 +18,13 @@ export class NinePiecesPage implements OnInit {
   done7 = [];
   done8 = [];
   done9 = [];
-
-  imgs = []
-
-  img: string = ''
-
+  img = '';
+  selectImg = 'slide-in-bottom';
 
   ngOnInit() {
   }
 
-  constructor(public alertController: AlertController, private GetPhotos: GetPhotosService) {
+  constructor(public alertController: AlertController) {
     this.todo = [
       { value: '1', done: 'done1' },
       { value: '2', done: 'done2' },
@@ -41,12 +37,13 @@ export class NinePiecesPage implements OnInit {
       { value: '9', done: 'done9' }
     ];
     this.todo = this.shuffle(this.todo);
-    this.imgs = GetPhotos.getPhotos();
-    this.img = GetPhotos.initPhoto();
+    this.selectImg = 'slide-in-bottom';
+    this.reload();
+    this.img = '';
    }
 
   private shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
       // Pick a remaining element...
@@ -79,24 +76,17 @@ export class NinePiecesPage implements OnInit {
 
 
 
-  changeImg(img) {
+  changeImg(img: string) {
     this.reload();
+    this.muestraComponente();
     this.img = img;
   }
 
-
-
-  slideOpts = {
-    effect: 'flip',
-    spaceBetween: 25,
-    slidesPerView: 3
-  };
-
   evenPredicate(drag: CdkDrag, drop: CdkDropList) {
     if (drag.data.done === drop.id) {
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
   }
 
@@ -132,13 +122,18 @@ export class NinePiecesPage implements OnInit {
         event.container.data,
         event.previousIndex,
         event.currentIndex);
-      event.container.disabled = true
+      event.container.disabled = true;
     }
     if (event.previousContainer.data.length === 0) {
       this.presentAlertConfirm();
     }
   }
+
+  muestraComponente(): void {
+    if (this.selectImg === 'slide-out-bottom') {
+      this.selectImg = 'slide-in-bottom';
+    } else {
+      this.selectImg = 'slide-out-bottom';
+    }
+  }
 }
-
-
-

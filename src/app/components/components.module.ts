@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MyComponentComponent } from './selectImg/selectImg.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
     MyComponentComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
   ],
   exports: [
     MyComponentComponent

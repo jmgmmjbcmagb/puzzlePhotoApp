@@ -1,11 +1,14 @@
-<div class="container slide-in-bottom">
+<div class="container">
 <div class="buttonUp">
-    <div class='box'>
-        <div class='wave -one'></div>
-        <div class='wave -two'></div>
-        <div class='wave -three'></div>
-        <div class='title'>Capacities</div>
-      </div>
+    <h1>
+        Selecciona Imagen
+    </h1>
 </div>
-<div class="slidesImg"></div>
+<div class="slidesImg">
+    <ion-slides scrollbar="false" [options]="slideOpts" class="slide">
+        <ion-slide *ngFor="let slide of imgs" (click)="changeImg(slide.img)">
+            <img class="imgSlide" [src]="slide.img">
+        </ion-slide>
+      </ion-slides>
+</div>
 </div>

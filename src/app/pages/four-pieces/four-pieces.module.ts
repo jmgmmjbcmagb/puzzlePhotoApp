@@ -7,9 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { FourPiecesPage } from './four-pieces.page';
 
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ComponentsModule } from 'src/app/components/components.module';
-
 
 const routes: Routes = [
   {
@@ -27,7 +26,7 @@ const routes: Routes = [
     ComponentsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [FourPiecesPage],
-  exports: []
+  declarations: [FourPiecesPage]
 })
+
 export class FourPiecesPageModule {}
