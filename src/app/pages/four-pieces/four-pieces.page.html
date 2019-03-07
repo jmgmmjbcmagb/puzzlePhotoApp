@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container4Pieces">
   <div class="tablero">
     <ion-row text-center padding-top>
       <ion-col size-xs="12" size-sm="12">
@@ -48,10 +48,5 @@
     </ion-row>
   </div>
 </div>
+<footerBar *ngIf="img" (selectedImg)="changeImg( $event )" (button3)="muestraComponente( $event )"></footerBar>
 <selectImg *ngIf="selectImg" (selectedImg)="changeImg( $event )" [ngClass]="selectImg"></selectImg>
-<ion-footer>
-  <ion-toolbar>
-    <ion-button [routerLink]="['/home']">Home</ion-button>
-    <ion-button (click)="muestraComponente()">Selecciona imagen</ion-button>
-  </ion-toolbar>
-</ion-footer>

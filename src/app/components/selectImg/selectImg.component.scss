@@ -11,12 +11,13 @@
     background: white;
     position: absolute;
     bottom: 0;
+    background: #f9f5cb;
 }
 
 .buttonUp {
     width: 100vw;
     height: 10vh;
-    background: white;
+    background: #f9f5cb;
     color: black;
     display: flex;
     align-items: center;
@@ -24,15 +25,18 @@
     position: absolute;
     bottom: 40vh;
     box-shadow: 0px -1px 2px 0px rgba(0,0,0,0.50);
+    
 }
 
 .imgSlide {
     height: 28vh;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    background: #f9f5cb;
 }
 
 .slide {
     padding: 10px 0;
+    background: #f9f5cb;
 }
 
 

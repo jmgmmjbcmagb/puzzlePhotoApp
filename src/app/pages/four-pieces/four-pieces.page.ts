@@ -16,6 +16,7 @@ export class FourPiecesPage implements OnInit {
   done4 = [];
   img = '';
   selectImg = 'slide-in-bottom';
+  footerClass = '';
 
   ngOnInit() {
   }
@@ -108,10 +109,13 @@ export class FourPiecesPage implements OnInit {
   }
 
   muestraComponente(): void {
+    console.log(1)
     if (this.selectImg === 'slide-out-bottom') {
       this.selectImg = 'slide-in-bottom';
+      this.footerClass = 'slide-out-bottom';
     } else {
       this.selectImg = 'slide-out-bottom';
+      this.footerClass = 'slide-in-bottom';
     }
   }
 }

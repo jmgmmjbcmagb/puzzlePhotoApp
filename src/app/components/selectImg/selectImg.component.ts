@@ -6,7 +6,7 @@ import { GetPhotosService } from '../../services/get-photos.service';
   templateUrl: './selectImg.component.html',
   styleUrls: ['./selectImg.component.scss'],
 })
-export class MyComponentComponent implements OnInit {
+export class SelectComponent implements OnInit {
 
   constructor(private GetPhotos: GetPhotosService) {
     this.imgs = GetPhotos.getPhotos();

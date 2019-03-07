@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     FormsModule,
     IonicModule,
     DragDropModule,
+    ComponentsModule,
     RouterModule.forChild([
       {
         path: '',

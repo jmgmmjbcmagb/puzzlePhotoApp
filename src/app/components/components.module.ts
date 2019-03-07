@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MyComponentComponent } from './selectImg/selectImg.component';
+
 import { IonicModule } from '@ionic/angular';
+
+import { SelectComponent } from './selectImg/selectImg.component';
+import { FooterBarComponent } from './footer-bar/footer-bar.component';
 
 @NgModule({
   declarations: [
-    MyComponentComponent
+    SelectComponent,
+    FooterBarComponent,
   ],
   imports: [
     CommonModule,
     IonicModule
   ],
   exports: [
-    MyComponentComponent
+    SelectComponent,
+    FooterBarComponent
   ]
 })
 export class ComponentsModule { }

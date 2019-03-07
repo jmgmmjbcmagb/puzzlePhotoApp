@@ -83,10 +83,5 @@
     </ion-row>
   </div>
 </div>
-  <selectImg *ngIf="selectImg" (selectedImg)="changeImg( $event )" [ngClass]="selectImg"></selectImg>
-  <ion-footer>
-    <ion-toolbar>
-        <ion-button [routerLink]="['/home']">Home</ion-button>
-      <ion-button (click)="muestraComponente()">Selecciona imagen</ion-button>
-    </ion-toolbar>
-  </ion-footer>
+<footerBar *ngIf="img" (selectedImg)="changeImg( $event )" (button3)="muestraComponente( $event )"></footerBar>
+<selectImg *ngIf="selectImg" (selectedImg)="changeImg( $event )" [ngClass]="selectImg"></selectImg>
