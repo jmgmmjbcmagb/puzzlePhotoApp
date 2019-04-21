@@ -1,14 +1,14 @@
 <div class="container">
-<div class="buttonUp">
-    <h1>
-        Selecciona Imagen
-    </h1>
-</div>
-<div class="slidesImg">
-    <ion-slides scrollbar="false" [options]="slideOpts" class="slide">
-        <ion-slide *ngFor="let slide of imgs">
-            <img class="imgSlide" [src]="slide.img" (click)="changeImg(slide.img)">
-        </ion-slide>
-      </ion-slides>
-</div>
+    <div class="buttonUp">
+        <h1>
+            Selecciona Imagen
+        </h1>
+    </div>
+    <div class="slidesImg">
+        <ion-slides scrollbar="false" [options]="slideOpts" class="slide">
+            <ion-slide *ngFor="let slide of imgs">
+                <img class="imgSlide" [src]="slide.img" (click)="changeImg(slide.img)" />
+            </ion-slide>
+        </ion-slides>
+    </div>
 </div>

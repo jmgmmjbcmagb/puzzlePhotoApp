@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CdkDragDrop, CdkDropList, transferArrayItem, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
 import { AlertController } from '@ionic/angular';
 
@@ -7,7 +7,7 @@ import { AlertController } from '@ionic/angular';
   templateUrl: './four-pieces.page.html',
   styleUrls: ['./four-pieces.page.scss'],
 })
-export class FourPiecesPage implements OnInit {
+export class FourPiecesPage implements OnInit, OnDestroy {
 
   todo = [];
   done1 = [];
@@ -15,24 +15,26 @@ export class FourPiecesPage implements OnInit {
   done3 = [];
   done4 = [];
   img = '';
-  selectImg = 'slide-in-bottom';
-  footerClass = '';
+  selectImg = '';
+  showPieces = false;
+
+  constructor(public alertController: AlertController) {}
 
   ngOnInit() {
-  }
-
-  constructor(public alertController: AlertController) {
-    this.todo = [
-      { value: '1', done: 'done1' },
-      { value: '2', done: 'done2' },
-      { value: '3', done: 'done3' },
-      { value: '4', done: 'done4' }
-    ];
-    this.todo = this.shuffle(this.todo);
-    this.selectImg = 'slide-in-bottom';
+    this.selectImage();
     this.reload();
     this.img = '';
-   }
+  }
+
+  ngOnDestroy() {
+    this.todo = [];
+    this.done1 = [];
+    this.done2 = [];
+    this.done3 = [];
+    this.done4 = [];
+    this.img = '';
+    this.selectImg = '';
+  }
 
   private shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -53,6 +55,7 @@ export class FourPiecesPage implements OnInit {
     const alert = await this.alertController.create({
       header: 'Hecho!',
       message: 'Has completado el puzzle',
+      backdropDismiss: false,
       buttons: [
         {
           text: '👍',
@@ -65,9 +68,27 @@ export class FourPiecesPage implements OnInit {
     await alert.present();
   }
 
+  async selectImage() {
+    const alert = await this.alertController.create({
+      header: 'Nuevo puzzle',
+      message: 'Elige la imagen',
+      backdropDismiss: false,
+      buttons: [
+        {
+          text: '📷',
+          handler: () => {
+            this.muestraComponente();
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
   changeImg(img: string) {
     this.reload();
     this.muestraComponente();
+    this.showPieces = true;
     this.img = img;
   }
 
@@ -109,13 +130,10 @@ export class FourPiecesPage implements OnInit {
   }
 
   muestraComponente(): void {
-    console.log(1)
-    if (this.selectImg === 'slide-out-bottom') {
+    if (this.selectImg === 'slide-out-bottom' || this.selectImg === '') {
       this.selectImg = 'slide-in-bottom';
-      this.footerClass = 'slide-out-bottom';
     } else {
       this.selectImg = 'slide-out-bottom';
-      this.footerClass = 'slide-in-bottom';
     }
   }
 }

@@ -1,11 +1,11 @@
 .container {
-  height: 100vh;
-  background: url(https://media.istockphoto.com/vectors/children-seamless-texture-baby-theme-pattern-with-teddy-bear-and-vector-id490856844?s=2048x2048);
-  background-size: contain;
-  touch-action: pan-y;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    min-height: 100vh;
+    background: url('../../../assets/img/background.jpg');
+    background-size: contain;
+    touch-action: pan-y;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

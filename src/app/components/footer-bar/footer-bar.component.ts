@@ -24,7 +24,7 @@ export class FooterBarComponent {
   buttonFooter(buttomPress) {
       switch (buttomPress) {
         case 1:
-          this.navCtrl.navigateForward('/home');
+          this.navCtrl.navigateRoot('/');
           this.buttonReset();
           break;
         case 2:

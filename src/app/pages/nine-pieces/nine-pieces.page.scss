@@ -1,78 +1,77 @@
-$pieces: 30vw;
-
+$pieces: 18vh;
 .container {
-    height: 100vh;
-    background: url(https://media.istockphoto.com/vectors/children-seamless-texture-baby-theme-pattern-with-teddy-bear-and-vector-id490856844?s=2048x2048);
+    min-height: 90vh;
+    background: url(./../../../assets/img/background.jpg);
     background-size: contain;
     touch-action: pan-y;
-    overflow-y: auto;
-  }
-  
-  img {
+    overflow-y: hidden;
+}
+
+img {
     width: $pieces*3;
     height: $pieces*3;
     max-width: none;
     position: absolute;
-  }
-  
-  .done1 {
+}
+
+.done1 {
     top: 0;
-  }
-  
-  .done2 {
+}
+
+.done2 {
     top: 0;
     left: -$pieces;
-  }
-  
-  .done3 {
+}
+
+.done3 {
     top: 0;
     right: 0;
-  }
-  
-  .done4 {
+}
+
+.done4 {
     left: 0;
-  }
+}
 
-  .done5 {
+.done5 {
     left: -$pieces;
-  }
-  
-  .done6 {
-    right: 0;
-  }
-  
-  .done7 {
-    bottom: 0;
-  }
-  
-  .done8 {
-    bottom: 0;
-    left: -$pieces;
-  }
+}
 
-  .done9 {
+.done6 {
+    right: 0;
+}
+
+.done7 {
+    bottom: 0;
+}
+
+.done8 {
+    bottom: 0;
+    left: -$pieces;
+}
+
+.done9 {
     bottom: 0;
     right: 0;
-  }
-  
-  .example-container {
+}
+
+.example-container {
     width: $pieces;
     height: $pieces;
     display: inline-block;
     vertical-align: top;
     position: relative;
     overflow: hidden;
-  }
-  
-  .pieces-container {
+}
+
+.pieces-container {
     width: $pieces;
     display: inline-block;
     vertical-align: top;
     position: relative;
     overflow: hidden;
-  }
-  
-  .example-list {
+}
+
+.example-list {
     border: solid 1px #ccc;
     width: $pieces;
     height: $pieces;
@@ -81,9 +80,9 @@ $pieces: 30vw;
     overflow: hidden;
     display: block;
     position: relative;
-  }
-  
-  .example-box {
+}
+
+.example-box {
     padding: 0;
     width: $pieces;
     height: $pieces;
@@ -99,4 +98,4 @@ $pieces: 30vw;
     font-size: 14px;
     position: relative;
     overflow: hidden;
-  }
+}
