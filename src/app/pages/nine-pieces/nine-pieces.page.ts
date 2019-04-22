@@ -72,6 +72,7 @@ export class NinePiecesPage implements OnInit, OnDestroy {
           text: '👍',
           handler: () => {
             this.reload();
+            this.muestraComponente();
           }
         }
       ]

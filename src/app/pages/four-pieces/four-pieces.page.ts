@@ -61,6 +61,7 @@ export class FourPiecesPage implements OnInit, OnDestroy {
           text: '👍',
           handler: () => {
             this.reload();
+            this.muestraComponente();
           }
         }
       ]

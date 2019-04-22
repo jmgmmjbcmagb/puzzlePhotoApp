@@ -145,3 +145,14 @@ selectImg {
     align-items: center;
     justify-content: center;
 }
+
+.toolbar {
+    height: 2vh;
+    width: 98%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0.5vh;
+    left: 1%;
+    border-radius: 5px;
+    z-index: 1;
+}

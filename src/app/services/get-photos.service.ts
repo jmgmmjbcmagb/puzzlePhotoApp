@@ -19,14 +19,14 @@ export class GetPhotosService {
   }
   public getPhotos() {
     const imgs = [
-      {img: '../../assets/img/1.jpg'},
-      {img: '../../assets/img/2.jpg'},
-      {img: '../../assets/img/3.jpg'},
-      {img: '../../assets/img/4.jpg'},
-      {img: '../../assets/img/5.jpg'},
-      {img: '../../assets/img/6.jpg'},
-      {img: '../../assets/img/7.jpg'},
-      {img: '../../assets/img/8.jpg'}
+      {id:0, img: '../../assets/img/1.jpg'},
+      {id:1, img: '../../assets/img/2.jpg'},
+      {id:2, img: '../../assets/img/3.jpg'},
+      {id:3, img: '../../assets/img/4.jpg'},
+      {id:4, img: '../../assets/img/5.jpg'},
+      {id:5, img: '../../assets/img/6.jpg'},
+      {id:6, img: '../../assets/img/7.jpg'},
+      {id:7, img: '../../assets/img/8.jpg'}
     ];
     return imgs;
   }
