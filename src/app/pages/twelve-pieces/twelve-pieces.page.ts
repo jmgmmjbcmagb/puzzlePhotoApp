@@ -22,6 +22,10 @@ export class TwelvePiecesPage implements OnInit, OnDestroy {
   done10 = [];
   done11 = [];
   done12 = [];
+  done13 = [];
+  done14 = [];
+  done15 = [];
+  done16 = [];
   img = '';
   selectImg = '';
   showPieces = false;
