@@ -22,6 +22,7 @@ export class NinePiecesPage implements OnInit, OnDestroy {
   img = '';
   selectImg = '';
   showPieces = false;
+  classContainer = 'example-container init';
 
   constructor(public alertController: AlertController) {}
 
@@ -100,6 +101,7 @@ export class NinePiecesPage implements OnInit, OnDestroy {
   changeImg(img: string) {
     this.reload();
     this.muestraComponente();
+    this.classContainer = 'example-container';
     this.showPieces = true;
     this.img = img;
   }
@@ -156,6 +158,14 @@ export class NinePiecesPage implements OnInit, OnDestroy {
       this.selectImg = 'slide-in-bottom';
     } else {
       this.selectImg = 'slide-out-bottom';
+    }
+  }
+
+  help(): void {
+    if (this.classContainer === 'example-container') {
+      this.classContainer = 'example-container helper';
+    } else {
+      this.classContainer = 'example-container';
     }
   }
 }

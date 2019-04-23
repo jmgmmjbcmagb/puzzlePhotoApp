@@ -12,6 +12,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent implements OnInit {
 
+  iOS = false;
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -20,7 +22,10 @@ export class AppComponent implements OnInit {
     this.initializeApp();
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+    console.log(this.iOS)
+   }
 
   initializeApp() {
     this.platform.ready().then(() => {

@@ -34,10 +34,10 @@ export class FooterBarComponent {
           this.button3.emit ( 1 );
           break;
         case 4:
-          this.button4.emit ( 1 );
+          this.button4.emit ('help');
           break;
         case 5:
-          this.button5.emit ( 1 );
+          window.location.reload();
           break;
       }
     }

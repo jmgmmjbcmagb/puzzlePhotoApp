@@ -21,7 +21,7 @@ export class SelectComponent implements OnInit {
   slideOpts = {
     effect: 'flip',
     slidesPerView: 2,
-    loop: true,
+    loop: false,
     centeredSlides: true,
     spaceBetween: 30,
     zoom: false,
