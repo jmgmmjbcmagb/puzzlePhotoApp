@@ -34,7 +34,7 @@ export class FooterBarComponent {
           this.button3.emit ( 1 );
           break;
         case 4:
-          this.button4.emit ('help');
+          this.button4.emit ( 1 );
           break;
         case 5:
           window.location.reload();
