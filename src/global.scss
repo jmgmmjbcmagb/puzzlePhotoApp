@@ -147,20 +147,24 @@ selectImg {
 }
 
 .toolbar {
-    height: 3vh;
-    width: 98%;
+    height: 20px;
+    width: 99%;
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
-    left: 1%;
+    left: 0.5%;
     border-radius: 0 0 5px 5px;
     z-index: 1;
 }
 
 .help {
     position: absolute;
-    top: 0.5vh;
 }
 
 .helper {
     opacity: 0.8;
+}
+
+.alert-button {
+    height: 15vh!important;
+    font-size: 5em!important;
 }

@@ -3,7 +3,7 @@
         <div class="tablero">
             <ion-row text-center padding-top>
                 <ion-col size-xs="12" size-sm="12">
-                    <img class="help" [src]="img">
+                    <img *ngIf="helpImg" class="help" [src]="img">
                     <div [class]="classContainer">
                         <div id="done1" cdkDropList #doneList1="cdkDropList" [cdkDropListData]="done1" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
                             <div class="example-box" *ngFor="let item of done1" cdkDrag><img class="done1" [src]="img"></div>

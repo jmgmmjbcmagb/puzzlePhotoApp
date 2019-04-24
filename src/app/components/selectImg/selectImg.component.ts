@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { GetPhotosService } from '../../services/get-photos.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'selectImg',
@@ -8,9 +9,8 @@ import { GetPhotosService } from '../../services/get-photos.service';
 })
 export class SelectComponent implements OnInit {
 
-  constructor(private GetPhotos: GetPhotosService) {
-    this.imgs = GetPhotos.getPhotos();
-   }
+  constructor(private GetPhotos: GetPhotosService, protected sanitizer: DomSanitizer) {
+  }
 
   @Output() selectedImg: EventEmitter<string> = new EventEmitter();
 
@@ -27,10 +27,19 @@ export class SelectComponent implements OnInit {
     zoom: false,
   };
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.imgs = this.GetPhotos.getPhotos();
+  }
 
   changeImg(img) {
     this.selectedImg.emit ( img );
   }
 
+  addPhoto(e) {
+    const file = e.target.files[0];
+    const photo = URL.createObjectURL(file);
+    this.imgs.push({
+      id: this.imgs.length,
+      img: this.sanitizer.bypassSecurityTrustResourceUrl(photo)});
+}
 }

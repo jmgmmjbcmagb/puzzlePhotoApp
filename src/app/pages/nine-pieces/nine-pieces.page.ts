@@ -23,6 +23,7 @@ export class NinePiecesPage implements OnInit, OnDestroy {
   selectImg = '';
   showPieces = false;
   classContainer = 'example-container init';
+  helpImg = false;
 
   constructor(public alertController: AlertController) {}
 
@@ -89,6 +90,7 @@ export class NinePiecesPage implements OnInit, OnDestroy {
       buttons: [
         {
           text: '📷',
+          cssClass: 'buttonAlert',
           handler: () => {
             this.muestraComponente();
           }
@@ -164,8 +166,10 @@ export class NinePiecesPage implements OnInit, OnDestroy {
   help(): void {
     if (this.classContainer === 'example-container') {
       this.classContainer = 'example-container helper';
+      this.helpImg = true;
     } else {
       this.classContainer = 'example-container';
+      this.helpImg = false;
     }
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CdkDragDrop, CdkDropList, transferArrayItem, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
 import { AlertController } from '@ionic/angular';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-four-pieces',
@@ -14,9 +15,10 @@ export class FourPiecesPage implements OnInit, OnDestroy {
   done2 = [];
   done3 = [];
   done4 = [];
-  img = '';
+  img: any = '';
   selectImg = '';
   showPieces = false;
+  helpImg = false;
   classContainer = 'example-container';
 
   constructor(public alertController: AlertController) {}
@@ -143,8 +145,10 @@ export class FourPiecesPage implements OnInit, OnDestroy {
   help(): void {
     if (this.classContainer === 'example-container') {
       this.classContainer = 'example-container helper';
+      this.helpImg = true;
     } else {
       this.classContainer = 'example-container';
+      this.helpImg = false;
     }
   }
 }

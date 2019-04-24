@@ -1,8 +1,8 @@
 {
     "name": "MirePuzzle",
     "short_name": "MirePuzzle",
-    "theme_color": "#00000000",
-    "background_color": "#00000000",
+    "theme_color": "#FFFADA",
+    "background_color": "#FFFADA",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",

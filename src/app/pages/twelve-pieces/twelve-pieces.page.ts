@@ -30,6 +30,7 @@ export class TwelvePiecesPage implements OnInit, OnDestroy {
   selectImg = '';
   showPieces = false;
   classContainer = 'example-container';
+  helpImg = false;
 
   constructor(public alertController: AlertController) {}
 
@@ -192,8 +193,10 @@ export class TwelvePiecesPage implements OnInit, OnDestroy {
   help(): void {
     if (this.classContainer === 'example-container') {
       this.classContainer = 'example-container helper';
+      this.helpImg = true;
     } else {
       this.classContainer = 'example-container';
+      this.helpImg = false;
     }
   }
 }
